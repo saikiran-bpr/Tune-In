@@ -1,0 +1,211 @@
+{
+    "info": {
+        "_postman_id": "1934adbc-0d6f-4bea-a521-e6b79064236a",
+        "name": "NST Music",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "17770397",
+        "_collection_link": "https://red-sunset-178042.postman.co/workspace/697c6de4-5291-4d11-a024-f8572a428f70/collection/17770397-1934adbc-0d6f-4bea-a521-e6b79064236a?action=share&source=collection_link&creator=17770397"
+    },
+    "item": [
+        {
+            "name": "Songs",
+            "item": [
+                {
+                    "name": "Get single song details",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{jwt}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "projectId",
+                                "value": "{{projectId}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "https://academics.newtonschool.co/api/v1/musicx/song/64cf907d47ae38c3e33a189a",
+                            "host": [
+                                "https://academics.newtonschool.co"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "musicx",
+                                "song",
+                                "64cf907d47ae38c3e33a189a"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get song list",
+                    "request": {
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "projectId",
+                                "value": "{{projectId}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "https://academics.newtonschool.co/api/v1/musicx/song",
+                            "host": [
+                                "https://academics.newtonschool.co"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "musicx",
+                                "song"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "login",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.environment.set(\"jwt\", pm.response.json().token); ",
+                                    ""
+                                ],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        },
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [
+                                    ""
+                                ],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MmEzNjA1ZDExMmIwZmM0M2U2ZjM3YyIsImlhdCI6MTcxNDA0MjM3MywiZXhwIjoxNzQ1NTc4MzczfQ.F6BNHlPoV_8Cp7YtoSpG0aScWO5D5LnuPnYIudAmd5M",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "projectId",
+                                "value": "{{projectId}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\" : \"test@user1.com\",\n    \"password\" : \"test@user1.com\",\n    \"appType\" : \"music\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "https://academics.newtonschool.co/api/v1/user/login",
+                            "protocol": "https",
+                            "host": [
+                                "academics",
+                                "newtonschool",
+                                "co"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "user",
+                                "login"
+                            ]
+                        },
+                        "description": "login route accepts { email , password }"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "signup",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    "pm.environment.set(\"jwt\", pm.response.json().token); ",
+                                    ""
+                                ],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "projectId",
+                                "value": "{{projectId}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Test User1\",\n    \"email\" : \"test@user1.com\",\n    \"password\" : \"test@user1.com\",\n    \"appType\" : \"music\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "https://academics.newtonschool.co/api/v1/user/signup",
+                            "protocol": "https",
+                            "host": [
+                                "academics",
+                                "newtonschool",
+                                "co"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "user",
+                                "signup"
+                            ]
+                        },
+                        "description": "signup route accepts { name , email , password }"
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
