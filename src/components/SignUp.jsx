@@ -72,9 +72,11 @@ export default function SignUp(){
     }
     return (
         <div className="text-[rgba(27,27,27,1)] w-screen h-screen flex flex-col justify-center items-center">
-            <div className=" flex flex-col gap-6 justify-center items-center w-[85%] h-[85%] bg-[url('https://s3-alpha-sig.figma.com/img/e410/6653/a9e810a46aa68c660d8132f7f776669e?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=R8pfqFE0Q0B08dXtiFC-QHmFWLRG478mrecV65xGDWE31SZPq92m~f5BYmeGzCyVYvyJ3qHjkyxjjTiXd3rByfUaamgBK8XQT3FYL4DffH4m~zo8ZaAxqGcj9y~c10BB9OH~finedCf181FNUhEIH2IWgzZMEbnN26NjJWWqk8WsKu0JFXE-IPrp8kxbbhLz5I9Rdqi4vXjxXURRSU~FV5n0Sflo5p02WM~jW3LCNZbVSqrU3OQz-OBHQOC5GpHX-hbohZL5WDi-MzDDZref7UHxfR4peP50ZqIxhkR4DerCvfjFIuzIzSbK727V5K~bPmNnssOwmh3Ff3AkHl7a5A__')] bg-cover bg-center">
+           <div style={{
+                backgroundImage : "url('/Background.png')"
+            }} className="flex flex-col gap-6 justify-center items-center w-[85%] h-[85%] bg-cover bg-center">
                 <div className="flex flex-col justify-center items-center gap-6">
-                    <img src="https://s3-alpha-sig.figma.com/img/e033/f421/1fedf1b427e06d6f538b0af651bea421?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ci8PSBoVV8Og9DruaDqtXV5~7u0-hUZIU4BfGpPDLXuBcbvWIlrj8~Jzud5i8Wq0wyT4gUGtAQ3DJV5BRjQc387PXSBtnqoo1nDF7D9UxPxJK67HQdoVjFe9tj9KHV9WKEjoPfqGF~6b1o4rIje-Gh9-OBmTk2FrKZRSXW~WMEG0q7rBouN5OzxSKE3vNTlg46~w8Pt1A3MHt49COJ9Evha3U02T65TbvvzOBsKtGsKLV3FwGkXkJCI~Tqf7okpfmB2b3WETRv0MHrgaLjmP~q8Zje-cT6ph8Xqujuda3~zROsqKb0cXzgx3tRDH~N79B9PALv8caEXJymNQ8UfMHA__"/>
+                <img src="/GaanaLogo.png" />
                     <h2 className=" text-[rgba(209,212,212,1)] text-3xl">Listen to Gaana Non-Stop</h2>
                     <h1 className="text-[rgba(219,43,47,1)] text-3xl">Create Your Account</h1>
                 </div>

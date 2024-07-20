@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "framer-motion": "^11.3.8",
     "json-server": "^1.0.0-beta.0",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",
@@ -43,5 +44,9 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "tailwind.config.js",
+  "author": "",
+  "license": "ISC"
 }

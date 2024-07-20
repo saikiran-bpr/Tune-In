@@ -8,6 +8,9 @@ export default function Song(){
     const navigate = useNavigate();
     const [artists, setArtists] = useState("");
     useEffect(() => {
+        if(!contextData.isSignedIn){
+            navigate("/login");
+        }
         const fetchData = async () => {
             const response = await fetch(`https://academics.newtonschool.co/api/v1/musicx/song/${id}`, {
                 method : "GET",
